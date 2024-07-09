@@ -1,0 +1,82 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: S05->D1
+    R2: S05->D1
+    R3: S15->D1
+    R4: S06,S10,S12,S15->D1
+    R5: S01,S06,S08,S12->D1
+    R6: S03,S05,S12->D1
+    R7: S01->D1
+    R8: S15->D1
+    R9: S01,S08,S15->D1
+    R10: S10,S12->D1
+    R11: S10->D1
+    R12: S03,S06->D1
+    R13: S04,S01,S09->D2
+    R14: S09->D2
+    R15: S14,S7->D2
+    R16: S05,S13,S14->D2
+    R17: S01,S05,S07->D2
+    R18: S01->D2
+    R19: S04->D2
+    R20: S14->D2
+    R21: S13,S14->D2
+    R22: S07,S05->D2
+    R23: S14,S13->D2
+    R24: S16,S17->D3
+    R25: S16,S17->D3
+    R26: S02,S04,S17,S18->D3
+    R27: S16,S17,S18->D3
+    R28: S02,S11,S16,S18->D3
+    R29: S02,S04,S05,S11,S18->D3
+    R30: S05,S11->D3
+    R31: S22,S23,S24->D4
+    R32: S19->D4
+    R33: S19,S26,S20->D4
+    R34: S01->D4
+    R35: S31->D4
+    R36: S22,S23,S30->D4
+    R37: S01,S24,S26,S29,S31->D4
+    R38: S19,S24,S29,S30,S31->D4
+    R39: S22,S23,S29->D4
+    R40: S26,S30,S31->D4
+    R41: S01,S26,S29,S30->D4
+    R42: S21,S25,S26,S27->D5
+    R43: S20,S27,S28->D5
+    R44: S25,S26,S27,S28->D5
+    R45: S20,S26,S28->D5
+
+  2) Triệu chứng người dùng mắc phải
+    S03, S04, S10, S12.
+
+  3) Bệnh nghi ngờ
+    D1.
+
+PART 2. Suy diễn
+  1) Goal D1. Tìm thấy luật R1:S05->D1. Các goals mới cần chứng mình là S05.
+  2) -Goal S05. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  3) Goal D1. Tìm thấy luật R2:S05->D1. Các goals mới cần chứng mình là S05.
+  4) -Goal S05. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  5) Goal D1. Tìm thấy luật R3:S15->D1. Các goals mới cần chứng mình là S15.
+  6) -Goal S15. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  7) Goal D1. Tìm thấy luật R4:S06,S10,S12,S15->D1. Các goals mới cần chứng mình là S06, S10, S12, S15.
+  8) -Goal S06. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  9) Goal D1. Tìm thấy luật R5:S01,S06,S08,S12->D1. Các goals mới cần chứng mình là S01, S06, S08, S12.
+ 10) -Goal S01. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 11) Goal D1. Tìm thấy luật R6:S03,S05,S12->D1. Các goals mới cần chứng mình là S03, S05, S12.
+ 12) -Goal S03. Cập nhật triệu chứng S03, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S04, S10, S12. Trả về thành công.
+ 13) -Goal S05. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 14) Goal D1. Tìm thấy luật R7:S01->D1. Các goals mới cần chứng mình là S01.
+ 15) -Goal S01. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 16) Goal D1. Tìm thấy luật R8:S15->D1. Các goals mới cần chứng mình là S15.
+ 17) -Goal S15. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 18) Goal D1. Tìm thấy luật R9:S01,S08,S15->D1. Các goals mới cần chứng mình là S01, S08, S15.
+ 19) -Goal S01. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 20) Goal D1. Tìm thấy luật R10:S10,S12->D1. Các goals mới cần chứng mình là S10, S12.
+ 21) -Goal S10. Cập nhật triệu chứng S10, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S04, S10, S12. Trả về thành công.
+ 22) -Goal S12. Cập nhật triệu chứng S12, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S04, S10, S12. Trả về thành công.
+ 23) ==>Goal D1. Đã được chứng minh, Trả về thành công
+
+PART 3. Kết quả
+  1) Goal D1 được chứng minh.
+  2) Road: R10.
